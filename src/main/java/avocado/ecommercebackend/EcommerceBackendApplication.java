@@ -1,5 +1,7 @@
 package avocado.ecommercebackend;
 
+import avocado.ecommercebackend.cart.model.Cart;
+import avocado.ecommercebackend.cart.service.CartService;
 import avocado.ecommercebackend.product.model.Product;
 import avocado.ecommercebackend.product.service.ProductService;
 import org.springframework.boot.CommandLineRunner;
@@ -19,9 +21,9 @@ public class EcommerceBackendApplication {
     }
 
     @Bean
-    CommandLineRunner run(ProductService productService){
+    CommandLineRunner run(ProductService productService, CartService cartService){
         return args -> {
-
+            cartService.addCart(new Cart());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.1")
                     .stockQuantity(41)

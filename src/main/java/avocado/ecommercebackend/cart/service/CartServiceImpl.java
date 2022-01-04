@@ -19,6 +19,11 @@ public class CartServiceImpl implements CartService{
     private CartRepository cartRepository;
 
     @Override
+    public Cart addCart(Cart cart) {
+        return cartRepository.save(cart);
+    }
+
+    @Override
     public Optional<Cart> getCart(Long id) {
         return Optional.ofNullable(cartRepository.findById(id)).get();
     }
