@@ -10,6 +10,7 @@ import java.util.List;
 public interface CartProductService {
     CartProduct addProduct(ICartProduct iCartProduct);
     List<CartProduct> getByCartId(Long id);
+    void deleteProduct(Long id);
+    CartProduct addQuantity(Long id, int quantity);
 
-//    CartProduct deleteProduct();
 }

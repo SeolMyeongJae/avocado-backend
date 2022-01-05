@@ -33,4 +33,10 @@ public class WishProductServiceImpl implements WishProductService {
         log.info("wishList get in the wishList");
         return wishProductRepository.findAllByWishId(id);
     }
+
+    @Override
+    public void deleteProduct(Long id) {
+        WishProduct wishProduct = wishProductRepository.getById(id);
+        wishProductRepository.delete(wishProduct);
+    }
 }

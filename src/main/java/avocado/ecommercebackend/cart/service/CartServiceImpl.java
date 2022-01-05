@@ -34,5 +34,9 @@ public class CartServiceImpl implements CartService{
         return cart.getCartList();
     }
 
+    @Override
+    public Cart addCart() {
 
+        return cartRepository.save(new Cart());
+    }
 }

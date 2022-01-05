@@ -4,6 +4,7 @@ import avocado.ecommercebackend.cart.dto.ICart;
 import avocado.ecommercebackend.cart.model.Cart;
 import avocado.ecommercebackend.cart.repository.CartRepository;
 import avocado.ecommercebackend.cart.service.CartService;
+import avocado.ecommercebackend.cartProduct.dto.CartDto;
 import avocado.ecommercebackend.cartProduct.dto.ICartProduct;
 import avocado.ecommercebackend.cartProduct.model.CartProduct;
 import avocado.ecommercebackend.cartProduct.service.CartProductService;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/cart")
 public class CartProductController {
@@ -39,5 +41,15 @@ public class CartProductController {
     @GetMapping("/all/{id}")
     public List<CartProduct> getByCartId(@PathVariable Long id) {
         return cartProductService.getByCartId(id);
+    }
+
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){ cartProductService.deleteProduct(id); }
+
+    @PutMapping("")
+    public CartProduct changeQuantity(@RequestBody CartDto cartDto) {
+        System.out.println(cartDto.toString());
+        return cartProductService.addQuantity(cartDto.getId(), cartDto.getQuantity());
     }
 }

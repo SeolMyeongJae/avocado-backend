@@ -8,4 +8,6 @@ import java.util.List;
 public interface WishProductService {
     WishProduct addProduct(WishProductDto wishProductDto);
     List<WishProduct> getWishList(Long id);
+    void deleteProduct(Long id);
+
 }

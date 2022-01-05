@@ -24,4 +24,8 @@ public class WishProductController {
     public List<WishProduct> getWishListById(@PathVariable Long id) {
         return wishProductService.getWishList(id);
     }
+
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){wishProductService.deleteProduct(id);}
 }

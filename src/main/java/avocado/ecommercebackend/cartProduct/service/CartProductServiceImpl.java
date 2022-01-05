@@ -28,12 +28,26 @@ public class CartProductServiceImpl implements CartProductService {
         Product product = productRepository.findById(iCartProduct.getProductId()).get();
         Cart cart = cartRepository.findById(iCartProduct.getCartId()).get();
         CartProduct cartProduct = new CartProduct(cart, product);
+
         cartProductRepository.save(cartProduct);
         return cartProduct;
     }
 
     @Override
+    public void deleteProduct(Long id) {
+        CartProduct cartProduct = cartProductRepository.getById(id);
+        cartProductRepository.delete(cartProduct);
+    }
+
+    @Override
     public List<CartProduct> getByCartId(Long id) {
         return cartProductRepository.findAllByCartId(id);
+    }
+
+    @Override
+    public CartProduct addQuantity(Long id, int quantity) {
+        CartProduct cartProduct = cartProductRepository.getById(id);
+        cartProduct.setQuantity(quantity);
+        return cartProductRepository.save(cartProduct);
     }
 }
