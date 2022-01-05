@@ -20,6 +20,8 @@ public class WishProductServiceImpl implements WishProductService {
     private final ProductService productService;
     private final WishProductRepository wishProductRepository;
 
+
+
     @Override
     public WishProduct addProduct(WishProductDto wishProductDto) {
         log.info("wishList add in the product");
@@ -32,5 +34,11 @@ public class WishProductServiceImpl implements WishProductService {
     public List<WishProduct> getWishList(Long id) {
         log.info("wishList get in the wishList");
         return wishProductRepository.findAllByWishId(id);
+    }
+
+    @Override
+    public void deleteProduct(Long id) {
+        WishProduct wishProduct = wishProductRepository.getById(id);
+        wishProductRepository.deleteById(wishProduct.getId());
     }
 }

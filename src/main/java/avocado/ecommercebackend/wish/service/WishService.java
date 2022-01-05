@@ -6,4 +6,6 @@ import java.util.Optional;
 
 public interface WishService {
     Optional<Wish> getWish(Long id);
+    Wish addWish(Wish wish);
+
 }

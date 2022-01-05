@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class CategoryListServiceImpl implements CategoryListService {
 
- log.info("CategoryListService found in the db");
+// log.info("CategoryListService found in the db");
  // 어노테이션을 호출했음에도 문제가 일어나는 이유 물어보기
 
     @Autowired

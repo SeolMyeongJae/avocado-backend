@@ -9,6 +9,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
 @Entity
 @NoArgsConstructor
 public class CartProduct {
@@ -25,9 +26,14 @@ public class CartProduct {
     @JoinColumn(name = "product_id")
     private Product product;
 
+    @Getter
+    @Setter
+    private int quantity;
+
     public CartProduct(Cart cart, Product product) {
         this.cart = cart;
         this.product = product;
+        this.quantity = 1;
     }
 
     public Product getProduct() {

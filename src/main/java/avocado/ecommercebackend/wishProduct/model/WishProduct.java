@@ -4,6 +4,7 @@ import avocado.ecommercebackend.product.model.Product;
 import avocado.ecommercebackend.wish.model.Wish;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -23,8 +24,10 @@ public class WishProduct {
     @JoinColumn(name = "product_id")
     private Product product;
 
+
     public WishProduct(Wish wish, Product product) {
         this.wish = wish;
         this.product = product;
+
     }
 }
