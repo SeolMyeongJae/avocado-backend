@@ -36,6 +36,7 @@ public class CartProductServiceImpl implements CartProductService {
     @Override
     public void deleteProduct(Long id) {
         CartProduct cartProduct = cartProductRepository.findById(id).get();
+        cartProductRepository.delete(cartProduct);
     }
 
     @Override
