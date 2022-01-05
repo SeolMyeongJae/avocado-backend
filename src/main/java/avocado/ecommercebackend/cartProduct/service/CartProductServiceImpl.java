@@ -28,6 +28,7 @@ public class CartProductServiceImpl implements CartProductService {
         Product product = productRepository.findById(iCartProduct.getProductId()).get();
         Cart cart = cartRepository.findById(iCartProduct.getCartId()).get();
         CartProduct cartProduct = new CartProduct(cart, product);
+
         cartProductRepository.save(cartProduct);
         return cartProduct;
     }
@@ -35,7 +36,6 @@ public class CartProductServiceImpl implements CartProductService {
     @Override
     public void deleteProduct(Long id) {
         CartProduct cartProduct = cartProductRepository.findById(id).get();
-        cartProductRepository.delete(cartProduct);
     }
 
     @Override

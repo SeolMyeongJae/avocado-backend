@@ -52,5 +52,6 @@ public class CartProductController {
     @PutMapping("")
     public CartProduct changeQuantity(@RequestBody DtoCartProduct dtoCartProduct){
         return cartProductService.addQuantity(dtoCartProduct.getId(),dtoCartProduct.getQuantity());
+
     }
 }

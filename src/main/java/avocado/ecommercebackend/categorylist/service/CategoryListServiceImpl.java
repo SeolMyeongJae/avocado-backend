@@ -21,6 +21,7 @@ public class CategoryListServiceImpl implements CategoryListService {
 
     @Override
     public CategoryList addCategoryList(CategoryList categoryList) {
+        log.info("CategoryListService found in the db");
         return categoryListRepository.save(categoryList);
     }
 

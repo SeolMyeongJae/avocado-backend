@@ -24,10 +24,10 @@ public class WishProductController {
     public List<WishProduct> getWishListById(@PathVariable Long id) {
         return wishProductService.getWishList(id);
     }
+
     @DeleteMapping("/delete/{id}")
     public void deleteWish(@PathVariable Long id){
         wishProductService.deleteProduct(id);
     }
-
 
 }
