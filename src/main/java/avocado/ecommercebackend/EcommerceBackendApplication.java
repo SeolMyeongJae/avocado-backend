@@ -2,6 +2,8 @@ package avocado.ecommercebackend;
 
 import avocado.ecommercebackend.cart.model.Cart;
 import avocado.ecommercebackend.cart.service.CartService;
+import avocado.ecommercebackend.category.model.Category;
+import avocado.ecommercebackend.category.service.CategoryService;
 import avocado.ecommercebackend.product.model.Product;
 import avocado.ecommercebackend.product.service.ProductService;
 import avocado.ecommercebackend.wish.model.Wish;
@@ -23,8 +25,17 @@ public class EcommerceBackendApplication {
     }
 
     @Bean
-    CommandLineRunner run(ProductService productService, CartService cartService, WishService wishService){
+    CommandLineRunner run(ProductService productService, CartService cartService, WishService wishService, CategoryService categoryService){
         return args -> {
+            categoryService.addCategory(Category.builder()
+                    .categoryName("Necklace")
+                    .build());
+            categoryService.addCategory(Category.builder()
+                    .categoryName("Ring")
+                    .build());
+            categoryService.addCategory(Category.builder()
+                    .categoryName("Bracelet")
+                    .build());
             cartService.addCart(new Cart());
             wishService.addWish(new Wish());
             productService.addProduct(Product.builder()
@@ -39,6 +50,7 @@ public class EcommerceBackendApplication {
                     .isBest(true)
                     .isTodayDeal(false)
                     .isAlmostSold(false)
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.2")
@@ -52,6 +64,7 @@ public class EcommerceBackendApplication {
                     .isBest(true)
                     .isTodayDeal(false)
                     .isAlmostSold(false)
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.3")
@@ -65,6 +78,7 @@ public class EcommerceBackendApplication {
                     .isBest(true)
                     .isTodayDeal(false)
                     .isAlmostSold(false)
+                    .category(categoryService.getCategory(3L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.4")
@@ -78,6 +92,7 @@ public class EcommerceBackendApplication {
                     .isBest(false)
                     .isTodayDeal(false)
                     .isAlmostSold(false)
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.5")
@@ -91,6 +106,7 @@ public class EcommerceBackendApplication {
                     .isBest(true)
                     .isTodayDeal(false)
                     .isAlmostSold(false)
+                    .category(categoryService.getCategory(2L).get())
                     .build());
 
         };

@@ -1,12 +1,10 @@
 package avocado.ecommercebackend.product.model;
 
+import avocado.ecommercebackend.category.model.Category;
 import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
@@ -29,12 +27,16 @@ public class Product {
     private Boolean isAlmostSold;
 
 
+    @OneToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
     public Product() {
     }
 
     @Builder
 
-    public Product(String productName, int stockQuantity, int price, int sale, int rate, String productDetail, Boolean isSlide, Boolean isTrend, Boolean isBest, Boolean isTodayDeal, Boolean isAlmostSold) {
+    public Product(String productName, int stockQuantity, int price, int sale, int rate, String productDetail, Boolean isSlide, Boolean isTrend, Boolean isBest, Boolean isTodayDeal, Boolean isAlmostSold, Category category) {
         this.productName = productName;
         this.stockQuantity = stockQuantity;
         this.price = price;
@@ -46,6 +48,6 @@ public class Product {
         this.isBest = isBest;
         this.isTodayDeal = isTodayDeal;
         this.isAlmostSold = isAlmostSold;
+        this.category = category;
     }
-
 }

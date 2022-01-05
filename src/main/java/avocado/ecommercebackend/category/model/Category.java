@@ -18,14 +18,10 @@ public class Category {
     private Long id;
     private int type;
     private String categoryName;
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
 
     @Builder
-    public Category(int type, String categoryName, Product product) {
+    public Category(int type, String categoryName) {
         this.type = type;
         this.categoryName = categoryName;
-        this.product = product;
     }
 }

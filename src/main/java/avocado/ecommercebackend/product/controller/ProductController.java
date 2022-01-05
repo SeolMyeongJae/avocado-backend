@@ -25,6 +25,11 @@ public class ProductController {
     @GetMapping("/get/{id}")
     public Product get(@PathVariable Long id) {
         return productService.getProductById(id).get();
+    }
 
+    @GetMapping("/{id}")
+    public List<Product> getFilter(@PathVariable Long id) {
+        System.out.println(id);
+        return productService.filterProducts(id);
     }
 }

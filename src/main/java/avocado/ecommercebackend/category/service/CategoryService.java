@@ -10,12 +10,10 @@ import java.util.Optional;
 
 public interface CategoryService {
 
-    Category addCategory(CategoryDto categoryDto);
+    Category addCategory(Category category);
     List<Category>getAllCategory();
     Optional<Category>getCategory(Long id);
-    List<Product>getCategoryByProductById(Long id);
-
-
+//    List<Product>getCategoryByProductById(Long id);
 
 
 }

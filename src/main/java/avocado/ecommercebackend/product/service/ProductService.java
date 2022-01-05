@@ -10,5 +10,5 @@ public interface ProductService {
     Product addProduct(Product product);
     List<Product>getAllProduct();
     Optional<Product> getProductById(Long id);
-
+    List<Product> filterProducts(Long id);
 }

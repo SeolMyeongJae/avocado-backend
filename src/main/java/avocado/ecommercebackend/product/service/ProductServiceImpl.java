@@ -26,6 +26,11 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public List<Product> filterProducts(Long id) {
+        return productRepository.findAllByCategoryId(id);
+    }
+
+    @Override
     public Optional<Product> getProductById(Long id) {
         return Optional.ofNullable(productRepository.findById(id)).get();
 
