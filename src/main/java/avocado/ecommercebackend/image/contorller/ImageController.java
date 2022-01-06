@@ -1,6 +1,7 @@
 package avocado.ecommercebackend.image.contorller;
 
 import avocado.ecommercebackend.image.dto.IImage;
+import avocado.ecommercebackend.image.dto.ImageDto;
 import avocado.ecommercebackend.image.model.Image;
 import avocado.ecommercebackend.image.service.ImageService;
 import avocado.ecommercebackend.product.model.Product;
@@ -17,8 +18,8 @@ public class ImageController {
     private ImageService imageService;
 
     @PostMapping("/add")
-    public Image add(@RequestBody IImage iImage){
-        return imageService.addImage(iImage);
+    public void add(@RequestBody IImage iImage){
+        imageService.addImage(iImage);
     }
     @GetMapping("/getall")
     public List<Image>getAllImage(){
@@ -29,7 +30,7 @@ public class ImageController {
         return imageService.getImage(id).get();
     }
     @GetMapping("/getAll/{id}")
-    public List<Image> getAllImageByProductId(@PathVariable Long id){
+    public List<ImageDto> getAllImageByProductId(@PathVariable Long id){
         return imageService.getImageByProductById(id);
     }
 }
