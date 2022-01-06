@@ -1,6 +1,7 @@
 package avocado.ecommercebackend.user.controller;
 
 
+import avocado.ecommercebackend.user.dto.UserDto;
 import avocado.ecommercebackend.user.model.User;
 import avocado.ecommercebackend.user.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/user/addUser")
-    public User addUser(@RequestBody User user){return userService.addUser(user);}
+    public User addUser(@RequestBody UserDto userDto){return userService.addUser(userDto);}
 
     @GetMapping("/user/getAllUser")
     public List<User> getAllUser(){return userService.getAllUser();}
