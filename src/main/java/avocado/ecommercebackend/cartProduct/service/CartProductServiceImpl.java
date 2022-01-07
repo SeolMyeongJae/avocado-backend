@@ -45,9 +45,9 @@ public class CartProductServiceImpl implements CartProductService {
     }
 
     @Override
-    public CartProduct addQuantity(Long id, int quantity) {
+    public void addQuantity(Long id, int quantity) {
         CartProduct cartProduct = cartProductRepository.getById(id);
         cartProduct.setQuantity(quantity);
-        return cartProductRepository.save(cartProduct);
+        cartProductRepository.save(cartProduct);
     }
 }
