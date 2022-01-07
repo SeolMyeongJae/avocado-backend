@@ -17,6 +17,6 @@ public interface UserService {
 
     void addRole(Role role);
 
-    void addRoleByUser(String userName, String roleName);
+    void addRoleByUser(User user, String roleName);
 }
 

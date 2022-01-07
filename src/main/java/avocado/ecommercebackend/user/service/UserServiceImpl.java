@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
                 .userEmail(userDto.getUserEmail())
                 .userPassword(userDto.getPassword())
                 .build();
-        addRoleByUser(user.getUserName(), "User");
+        addRoleByUser(user, "User");
         return userRepository.save(user);
     }
 
@@ -81,9 +81,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public void addRoleByUser(String userName, String roleName) {
-        log.info("유저 {} 에게 {} 권한을 추가했습니다. ", roleName, userName);
-        User user = userRepository.findByUserName(userName);
+    public void addRoleByUser(User user, String roleName) {
+        log.info("{} 권한을 추가했습니다. ", roleName);
         Role role = roleRepository.findByName(roleName);
         user.getRoles().add(role);
     }

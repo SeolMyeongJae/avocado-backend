@@ -19,7 +19,10 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/user/addUser")
-    public User addUser(@RequestBody UserDto userDto){return userService.addUser(userDto);}
+    public User addUser(@RequestBody UserDto userDto){
+        System.out.println(userDto.toString());
+        return userService.addUser(userDto);
+    }
 
     @GetMapping("/user/getAllUser")
     public List<User> getAllUser(){return userService.getAllUser();}

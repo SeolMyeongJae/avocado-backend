@@ -104,29 +104,13 @@ public class EcommerceBackendApplication {
                     .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
-
-                    .category(categoryService.getCategory(1L).get())
-                    .build());
-            productService.addProduct(Product.builder()
-                    .productName("Louis Vuitton no.5")
-                    .stockQuantity(41)
-                    .price(650000)
-                    .sale(30)
-                    .rate(4)
-                    .productDetail("빅투아르 드 카스텔란은 새로운 행운의 상징과 함께 Rose de vents 컬렉션의 이야기를 새롭게 써 내려갑니다. \\n이번 챕터를 위해, 그녀는 무슈 디올이 사랑해 마지않은 모티브인 하트를 선택했습니다.\\n테두리의 라이스 그레인 브레이드 장식이 돋보이는 메달은 움직임에 따라 체인 위에서 자유롭게 회전하며 하트 또는 하드 스톤의 우아한 자태를 드러냅니다.")
-                    .category(categoryService.getCategory(2L).get())
-                    .build());
-            productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.6")
                     .stockQuantity(13)
                     .price(180000)
                     .sale(15)
                     .rate(5)
                     .productDetail("디올 하우스의 코드를 담은 우아하고 은은한 매력의 Clair D Lune 목걸이입니다. \n가느다란 팔라듐 피니시 메탈 체인 한가운데 화이트 크리스탈 CD 시그니처가 돋보입니다. \n단독으로 착용하거나 다른 목걸이와 레이어링하기 좋은 심플한 타임리스 스타일의 액세서리입니다.")
-
-           
-
-                    .category(categoryService.getCategory(2L).get())
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.7")
@@ -135,7 +119,7 @@ public class EcommerceBackendApplication {
                     .sale(15)
                     .rate(4)
                     .productDetail("우아하고 세련된 미학이 깃든 Clair D Lune 목걸이입니다.\n정교하게 제작된 골드 피니시 메탈 소재의 더블 디자인으로, 화이트 레진 진주를 파베 세팅한 CD 시그니처와 하트 참이 돋보입니다. \nClair D Lune 라인의 다양한 아이템과 함께 매치하기 좋습니다.")
-                    .category(categoryService.getCategory(2L).get())
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.8")
@@ -144,7 +128,7 @@ public class EcommerceBackendApplication {
                     .sale(15)
                     .rate(3)
                     .productDetail("빅투아르 드 카스텔란은 새로운 행운의 상징과 함께 Rose de vents 컬렉션의 이야기를 새롭게 써 내려갑니다. \\n이번 챕터를 위해, 그녀는 무슈 디올이 사랑해 마지않은 모티브인 하트를 선택했습니다.\\n테두리의 라이스 그레인 브레이드 장식이 돋보이는 메달은 움직임에 따라 체인 위에서 자유롭게 회전하며 하트 또는 하드 스톤의 우아한 자태를 드러냅니다.")
-                    .category(categoryService.getCategory(2L).get())
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.9")
@@ -153,6 +137,7 @@ public class EcommerceBackendApplication {
                     .sale(20)
                     .rate(4)
                     .productDetail("우아한 타임리스 스타일의 Clair D Lune 목걸이입니다. \n골드 피니시 메탈 소재로 정교하게 제작된 멀티체인 디자인으로 화이트 레진 진주 디테일, 화이트 크리스탈을 파베 세팅한 CD 시그니처 장식이 돋보입니다. \nClair D Lune 라인의 다양한 아이템과 함께 매치하기 좋습니다.")
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Louis Vuitton no.10")
@@ -161,7 +146,7 @@ public class EcommerceBackendApplication {
                     .sale(35)
                     .rate(5)
                     .productDetail("Monsieur Dior이 사랑한 행운의 별을 Victoire de Castellane이 팔각별 디자인의 바람 장미 실루엣으로 재해석해 선보입니다. \n움직일 때마다 그레인 브레이드로 감싼 메달이 체인 위에서 앞뒤로 회전합니다.")
-
+                    .category(categoryService.getCategory(1L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.1")
@@ -170,7 +155,7 @@ public class EcommerceBackendApplication {
                     .sale(45)
                     .rate(3)
                     .productDetail("Monsieur Dior이 사랑한 행운의 별을 Victoire de Castellane이 팔각별 디자인의 바람 장미 실루엣으로 새롭게 해석해 선보입니다.  \n 스톤 무게는 평균 무게를 기준으로 합니다. 모든 디올 Fine Jewelry 제품은 장인의 손길로 만들어진 제품으로써 미세한 흠집 및 손상으로도 제품의 가치에 영향이 있을 수 있으므로 ,\n 손상 또는 흠집이 있거나 사용 흔적이 있는 경우 교환/환불이 어려울 수 있습니다.")
-
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.2")
@@ -179,7 +164,7 @@ public class EcommerceBackendApplication {
                     .sale(45)
                     .rate(5)
                     .productDetail( "Monsieur Dior이 사랑한 행운의 별을 Victoire de Castellane이 팔각별 디자인의 바람 장미 실루엣으로 새롭게 해석해 선보입니다. \n 스톤 무게는 평균 무게를 기준으로 합니다. 모든 디올 Fine Jewelry 제품은 장인의 손길로 만들어진 제품으로써 미세한 흠집 및 손상으로도 제품의 가치에 영향이 있을 수 있으므로, \n 손상 또는 흠집이 있거나 사용 흔적이 있는 경우 교환/환불이 어려울 수 있습니다.")
-
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.3")
@@ -188,7 +173,7 @@ public class EcommerceBackendApplication {
                     .sale(25)
                     .rate(4)
                     .productDetail("로즈골드 피니시 메탈 링크와 중앙의 CD 시그니처가 어우러진 우아하면서도 볼드한 Petit CD 반지입니다.\n크리스탈 세팅과 크리스챤 디올이 가장 좋아했던 상징인 별 실루엣 참이 디자인을 완성합니다.\n 모던하고 임팩트 있는 스타일로, 데일리 아이템으로 착용하기 좋습니다.")
-
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.4")
@@ -197,7 +182,7 @@ public class EcommerceBackendApplication {
                     .sale(35)
                     .rate(5)
                     .productDetail("모던하면서도 타임리스한 스타일을 지닌 Dio(r)evolution 반지입니다. \n링크 디자인이 돋보이는 골드 피니시 메탈 디자인으로, 화이트 크리스탈을 파베 세팅한 DIOR 시그니처가 돋보입니다. \nDio(r)evolution 라인의 다양한 아이템과 함께 매치하기 좋습니다.")
-
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.5")
@@ -206,7 +191,7 @@ public class EcommerceBackendApplication {
                     .sale(45)
                     .rate(3)
                     .productDetail("우아하고 세련된 매력의 Petit CD 반지입니다. \n3줄의 골드 피니시 메탈 반지 위로 화이트 크리스탈이 파베 세팅된 CD 시그니처가 돋보입니다. 자그마한 화이트 레진 진주가 전체 디자인에 품격을 더합니다.\n 다양한 Petit CD 아이템과 매치하기 좋은 섬세한 반지입니다.")
-
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.6")
@@ -215,7 +200,7 @@ public class EcommerceBackendApplication {
                     .sale(45)
                     .rate(4)
                     .productDetail("이번 컬렉션의 무드를 고스란히 담은 볼드하고 강렬한 디자인의 Dior Sea Garden 반지입니다. \\n골드 피니시 메탈 메시-이펙트 밴드로 제작된 디자인으로 화이트 레진 진주와 스터드 장식이 돋보입니다. \\nDior Sea Garden 라인의 다양한 아이템과 함께 매치하기 좋은 세련된 반지입니다.")
-
+                    .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Bulgari no.7")
@@ -224,15 +209,6 @@ public class EcommerceBackendApplication {
                     .sale(15)
                     .rate(5)
                     .productDetail("빈티지한 디자인과 디올 하우스의 모던한 미학이 어우러진 30 Montaigne 반지입니다. \\n골드 피니시 메탈 소재의 밴드 위로 CHRISTIAN DIOR PARIS와 CD를 새긴 메달 장식이 돋보입니다. \\n30 Montaigne 라인의 다양한 아이템과 스타일링하기 좋은 타임리스한 반지입니다.")
-
-                    .build());
-            productService.addProduct(Product.builder()
-                    .productName("Bulgari no.7")
-                    .stockQuantity(42)
-                    .price(270000)
-                    .sale(15)
-                    .rate(5)
-                    .productDetail("빈티지한 디자인과 디올 하우스의 모던한 미학이 어우러진 30 Montaigne 반지입니다. \n골드 피니시 메탈 소재의 밴드 위로 CHRISTIAN DIOR PARIS와 CD를 새긴 메달 장식이 돋보입니다. \n30 Montaigne 라인의 다양한 아이템과 스타일링하기 좋은 타임리스한 반지입니다.")
                     .category(categoryService.getCategory(2L).get())
                     .build());
             productService.addProduct(Product.builder()
@@ -287,7 +263,7 @@ public class EcommerceBackendApplication {
                     .sale(35)
                     .rate(5)
                     .productDetail("우아함과 세련미를 모두 갖춘 30 Montaigne 팔찌입니다. \n네 줄의 화이트 글래스 비즈로 이루어진 앤틱 골드 피니시 메탈 디자인으로 화이트 크리스탈을 파베 세팅한 CD 시그니처가 시선을 사로잡습니다. \n30 Montaigne 라인의 다양한 아이템과 함께 스타일링하기 좋습니다.")
-                    .category(categoryService.getCategory(1L).get())
+                    .category(categoryService.getCategory(3L).get())
                     .build());
             productService.addProduct(Product.builder()
                     .productName("Dior no.4")
@@ -365,10 +341,14 @@ public class EcommerceBackendApplication {
 
             for(int i = 1; i <= 30; i++) {
                 String img = "";
+                String randomString;
                 Long x = Long.valueOf(i);
                 for(int j = 0; j < 4; j++) {
                     int random = (int)(Math.random() * 30 + 1);
-                    img = "md" + random + ".png";
+                    if(random < 10) {
+                        randomString = "0" + String.valueOf(random);
+                    } else randomString = String.valueOf(random);
+                    img = "md" + randomString + ".png";
                     imageService.addImage(new IImage(img, x));
                 }
             }
